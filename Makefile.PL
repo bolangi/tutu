@@ -5,8 +5,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME                => 'Tutu',
     AUTHOR              => 'Joel Roth <joelz@pobox.com>',
-    VERSION_FROM        => 'lib/Resources.pm',
-    ABSTRACT_FROM       => 'lib/Resources.pm',
+    VERSION_FROM        => 'lib/Tutu.pm',
+    ABSTRACT_FROM       => 'lib/Tutu.pm',
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More'				=> 0,
