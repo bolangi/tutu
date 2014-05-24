@@ -3,10 +3,10 @@ use Modern::Perl;
 use Data::Dumper::Concise;
 
 my @customize = split "\n",<<'END';
-$WEBROOT /home/childspace/chi3
-$WEBSITE_DOMAIN childspacemethod.com  
-$WEBSITE_URL http://childspacemethod.com 
-$WEBSITE_NAME ChildSpace Training Website
+$WEBROOT /home/maxfankel/spacesystems
+$WEBSITE_DOMAIN maxfankel.com
+$WEBSITE_URL http://maxfankel.com
+$WEBSITE_NAME Max Fankel Space Systems Website
 $WEBMASTER_NAME Max Fankel
 $WEBMASTER_MAIL_ADDRESS me@maxfankel.com
 END
@@ -33,7 +33,6 @@ for (@customize)
 	$replacement =~ s/\s+$//;		
 
 	$replacement =~ s{([\@\$])}{\\$1}g;
-	#$replacement =~ s{/}{\\/}g;
 	
 	$var =~ s{\$}{\\\$};
 	$rep .= "s{$var}{$replacement}; ";
