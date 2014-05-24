@@ -5,14 +5,8 @@ created as textfiles, typically formatted with Markdown.
 Tutu is based on the Dancer web framework.
  
 Tutu is configured as a website to display pages and to
-distribute text and media files for training course. It
-requires login, authenticated users may upload and download
-files.
-
-You may want to remove those capabilities if you don't need
-them. In fact, with everything available by streaming
-nowadays, it may be considered quaint to expect lay people
-to be able to download files.
+distribute media files for training course. It requires
+login, authenticated users may upload and download files.
 
 INSTALLATION
 
@@ -23,25 +17,22 @@ To install this module, you may run the following commands:
 	make test
 	make install
 
-SUPPORT AND DOCUMENTATION
+CUSTOMIZING THE DEFAULT WEBAPP TEMPLATE
 
-After installing, you can find documentation for this module
-by typing perldoc Tutu. 
+	Edit MY_WEBSITE_INIT to suit your planned site.
+	Run this script:
 
-You can also look for information at:
+    ./customize.pl
 
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tutu
+	Test your app by starting the local webserver and
+	pointing your browser to http://localhost:3000
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Tutu
+	cd $WEBSITE_ROOT
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Tutu
+	./dance.psgi
 
-    Search CPAN
-        http://search.cpan.org/dist/Tutu
-
+    Move the $WEBSITE_ROOT and $WEBSITE_DOMAIN directories
+    to the appropriate locations, if desired.
 
 COPYRIGHT AND LICENCE
 
@@ -49,4 +40,3 @@ Copyright (C) 2014 Joel Roth
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
