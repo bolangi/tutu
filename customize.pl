@@ -34,11 +34,13 @@ for (@customize)
 
 	$replacement =~ s{([\@\$])}{\\$1}g;
 	
+	
 	$var =~ s{\$}{\\\$};
 	$rep .= "s{$var}{$replacement}; ";
 }
 
 #say Dumper \%replace;
+$rep =~ s{'}{&#39;}g;
 my $command = qq(perl -p -i.bak -E '$rep' $targets);
 say;
 say $command;
