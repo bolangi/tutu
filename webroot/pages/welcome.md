@@ -21,6 +21,6 @@ contribute for this website, you may use the
 
 ##Feedback
 
-Please contact $ADMINISTRATOR_NAME, the webmaster, if you encounter any
+Please contact $WEBMASTER_NAME, the webmaster, if you encounter any
 problems with the materials you download, and with any
 issues or suggestions you may have regarding the site.
