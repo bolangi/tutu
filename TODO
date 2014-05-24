@@ -1,3 +1,6 @@
-+ force save-to-disk for file download using javascript
-+ password reset
++ trigger browser save-options menu on clicking downloadable
+  file link (possible using javascript?)
++ password reset and user password selection
 + file upload: mail webmaster and use description
++ single quotes in WEBSITE_NAME are not handled properly
+  They cause a shell command in customize.pl to fail
