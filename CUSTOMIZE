@@ -1,0 +1,11 @@
+$WEBROOT /home/childspace/chi3 
+$WEBSITE_DOMAIN childspacemethod.com 
+$WEBSITE_URL http://childspacemethod.com 
+$WEBSITE_NAME ChildSpace Training Website
+$WEBMASTER_NAME Max Fankel
+$WEBMASTER_MAIL_ADDRESS me@maxfankel.com
+
+targets:
+
+webroot/*
+
