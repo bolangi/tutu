@@ -39,7 +39,7 @@ for $WEBSITE_NAME.
 Note that these credentials are for your exclusive use.
 (Please don't share them.)
 
-$WEBSITE_HOME
+$WEBSITE_URL
 
 Your username is $username
 Your password is $password

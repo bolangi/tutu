@@ -1,10 +1,16 @@
 #!/usr/bin/env perl
+
+### Update remote servers
+
+### This script assumes that the local system's
+### installation path matches that of the remote remote server
+
 use Modern::Perl;
 use Cwd;
 my $opt = shift @ARGV;
-my $csh = '$EXAMPLE_COM';
+my $server = $WEBSITE_DOMAIN;
 my $cwd = getcwd;
 ($cwd) = $cwd =~ m/([^\/]+)$/;
-my $rsync_cmd = qq(rsync -avxP $opt --exclude-from=MANIFEST.SKIP ./ "$csh:$cwd/");
+my $rsync_cmd = qq(rsync -avxP $opt --exclude-from=MANIFEST.SKIP ./ "$server:$cwd/");
 say $rsync_cmd;
 system $rsync_cmd;
