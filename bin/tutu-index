@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
 use Modern::Perl;
-use Training::Utils 'index_directories';
-index_directories('/home/childspace/chi3');
+use Tutu::Utils 'index_directories';
+index_directories('.');
 say "Done";

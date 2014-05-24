@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 use Modern::Perl;
-use Training::Utils qw(generate_passwd generate_user_list);
+use Tutu::Utils qw(generate_passwd generate_user_list);
 generate_passwd();
 generate_user_list();
 
