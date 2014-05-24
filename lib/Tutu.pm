@@ -233,7 +233,7 @@ sub preprocess {
 
 sub final_output {
 		my ($topic, $body) = @_;
-		template 'training.tt', 
+		template 'default.tt', 
 				 {body  => $body,
 				  topic => $topic,
 				 }, 
