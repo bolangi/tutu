@@ -1,0 +1,33 @@
+.selfpromo { padding-left: 30px; /*center*/ }
+.selfpromo img { border: 0px; }
+.error { color: red }
+
+.nested { padding-left: 2em; }
+.linky { 
+    color: blue; background-color: transparent;
+    border: none; cursor: pointer;
+    font-size: 1em; margin: 0px; padding: 0px; vertical-align: bottom;
+    display: inline; 
+ }
+.paren { 
+ color: black;
+}
+.logout {
+    white-space: nowrap;
+}
+
+input.login {
+    width: 150px;
+}
+
+.note { text-align: center; width: 70%; margin: auto; background-color: #ffb; padding: 1em; }
+
+/* diff */
+table.diff {border:0;}
+table.diff td { font-family:monospace; white-space: pre-wrap; padding-right: .5em; padding-left: .5em}
+.diff_header {background-color:#e0e0e0; vertical-align: top}
+td.diff_header {text-align:right; font-family: }
+.diff_next {background-color:#c0c0c0}
+.diff_add {background-color:#aaffaa}
+.diff_chg {background-color:#ffff77}
+.diff_sub {background-color:#ffaaaa}
