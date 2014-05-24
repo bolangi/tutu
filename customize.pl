@@ -19,22 +19,30 @@ for (@customize)
 	$rep .= "s{$var}{$replacement}; ";
 }
 
-my $copy_domain_dir_cmd = "cp -a example.com $replace{'$WEBSITE_DOMAIN'}";
+my $new_domain_dir = $replace{'maxfankel.com'};
+my $copy_domain_dir_cmd = "cp -a example.com $new_domain_dir";
 say "
-copy domain directory: 
+copying domain directory: 
     $copy_domain_dir_cmd
 ";
-system $copy_domain_dir_cmd;
+-d $new_domain_dir 
+	and say ("directory $new_domain_dir already exists, fix this and try again."),
+	exit
+or system $copy_domain_dir_cmd;
 
-my $copy_webapp_dir_cmd = "cp -a webapp $replace{'$WEBSITE_ROOT'}";
+my ($new_webapp_dir) = $replace{'/home/maxfankel/space'} =~ m{/?([^/]+)/?$};
+
+my $copy_webapp_dir_cmd = "cp -a webapp $new_webapp_dir";
 say "
-copy webapp directory: 
+copying webapp directory: 
     $copy_webapp_dir_cmd
 ";
-system $copy_webapp_dir_cmd;
+-d $new_webapp_dir 
+	and say ("directory $new_webapp_dir already exists, fix this and try again."),
+	exit
+or system $copy_webapp_dir_cmd;
 
-
-my $grep = q(grep -lrP '\$[A-Z]' example.com webroot);
+my $grep = q(grep -lrP '\$[A-Z]'  $new_webapp_dir);
 my $targets = join " ",map{chomp; $_} qx($grep);
 say "
 Searching for files using shell command: 
