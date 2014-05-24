@@ -1,4 +1,4 @@
 #!/usr/bin/perl
 use strict;
 use Plack::Runner;
-Plack::Runner->run("$WEBROOT/dance.psgi");
+Plack::Runner->run("$WEBSITE_ROOT/dance.psgi");

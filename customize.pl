@@ -3,7 +3,7 @@ use Modern::Perl;
 use Data::Dumper::Concise;
 
 my @customize = split "\n",<<'END';
-$WEBROOT /home/maxfankel/space
+$WEBSITE_ROOT /home/maxfankel/space
 $WEBSITE_DOMAIN maxfankel.com
 $WEBSITE_URL http://maxfankel.com
 $WEBSITE_NAME Fankel's Space Systems
