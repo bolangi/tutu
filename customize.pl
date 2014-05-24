@@ -6,7 +6,7 @@ my @customize = split "\n",<<'END';
 $WEBSITE_ROOT /home/maxfankel/space
 $WEBSITE_DOMAIN maxfankel.com
 $WEBSITE_URL http://maxfankel.com
-$WEBSITE_NAME Fankel's Space Systems
+$WEBSITE_NAME Fankel Space Training
 $WEBMASTER_NAME Max Fankel
 $WEBMASTER_MAIL_ADDRESS me@maxfankel.com
 END
