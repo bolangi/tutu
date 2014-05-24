@@ -17,10 +17,8 @@ our @EXPORT_OK = qw( index_directories
 					remote_reminder 
 					send_out_mail);
 
-our $sender = $WEBMASTER_MAIL_ADDRESS;
-our $webmaster = $WEBMASTER_NAME;
-our $website_name = $WEBSITE_NAME;
-our $website_url = $WEBSITE_URL;
+use vars qw( $website_name $website_url $webmaster_name $webmaster_mail_address );
+our $sender = $webmaster_mail_address;
 
 sub index_directories { 
 	my $root = shift // getcwd;
@@ -249,7 +247,7 @@ Capitalization *is* signficant ("password" differs from
 
 Regards,
 
-$webmaster
+$webmaster_name
 --
 FORM
 }

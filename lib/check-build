@@ -1,2 +1,2 @@
 perl -cw Tutu.pm
-perl -cw Tutu::Utils.pm
+perl -cw Tutu/Utils.pm
