@@ -1,18 +1,18 @@
 Tutu - A skimpy outfit for Dancer 
 
-Tutu is a simple flat-file CMS app inspired by Blosxom.  It
-is based on the Dancer web framework and Pages are coded as
-markdown.
-
-It is configured as I originally designed it--a website to 
-support training programs. It requires login, and it
-permits authenticated users to upload and download files.
+Tutu is a flat-file CMS inspired by Blosxom.  Pages are
+created as textfiles, typically formatted with Markdown.
+Tutu is based on the Dancer web framework.
+ 
+Tutu is configured as a website to display pages and to
+distribute text and media files for training course. It
+requires login, authenticated users may upload and download
+files.
 
 You may want to remove those capabilities if you don't need
 them. In fact, with everything available by streaming
 nowadays, it may be considered quaint to expect lay people
-to be able to download files, let alone understand what that
-means.
+to be able to download files.
 
 INSTALLATION
 
