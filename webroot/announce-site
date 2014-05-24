@@ -1,0 +1,57 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+use File::Slurp;
+my @names = grep{ ! /-n/} @ARGV;
+my $simulate = grep { /-n/ } @ARGV;
+my $subject = "$WEBSITE_NAME";
+my @entries = read_file('pass');
+map { chomp } @entries;
+foreach my $entry( @entries ){
+	next if $entry =~ /^#/ or $entry =~ /^\s*$/;
+	my ($name, $email, $username, $password) = split /\s*:\s*/, $entry;
+	next if @names and not grep{ $name =~ /$_/i or $username =~ /$_/i} @names;
+	say "-->$name";
+	my $body = mail_body($name, $username, $password);
+	write_file('mail_body',$body);
+	my $command = qq(cat mail_body | mail -s "$subject" $email);
+	#print $command, $/;
+	if ($simulate ){
+=comment
+	say qq(To: $email
+Subject: $subject
+
+$body
+)
+=cut
+	}
+	else { system $command }
+	`echo $name >> passwd-sent`;
+}
+sub mail_body {
+	my ($name, $username, $password) = @_;
+	my ($first) = $name =~ /(.+?)\s*\S*$/;
+	#say $first;
+<<FORM;
+Dear $first,
+
+This automated mail contains your login credentials
+for $WEBSITE_NAME.
+Note that these credentials are for your exclusive use.
+(Please don't share them.)
+
+$WEBSITE_HOME
+
+Your username is $username
+Your password is $password
+
+Capitalization *is* signficant ("password" differs from
+"PASSword")
+
+Regards,
+
+$ADMINISTRATOR_NAME
+
+--
+
+FORM
+}

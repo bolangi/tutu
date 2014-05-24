@@ -1,0 +1,11 @@
+#!/bin/sh
+RS=`perl -cw Tutu.pm 2>&1 | grep 'syntax OK'`
+UT=`perl -cw Tutu::Utils.pm 2>&1 | grep 'syntax OK'`
+if [ -z $RS ] || -z [ $UT ]; 
+then
+	exec ./check-build;
+else 
+	cd ..
+	perl *PL; make dist; cpanm *gz
+	cd lib
+fi

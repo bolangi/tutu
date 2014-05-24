@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+use Cwd;
+my $opt = shift @ARGV;
+my $csh = '$EXAMPLE_COM';
+my $cwd = getcwd;
+($cwd) = $cwd =~ m/([^\/]+)$/;
+my $rsync_cmd = qq(rsync -avxP $opt --exclude-from=MANIFEST.SKIP ./ "$csh:$cwd/");
+say $rsync_cmd;
+system $rsync_cmd;

@@ -1,0 +1,12 @@
+access.example
+announce-site
+ignore
+logs
+MANIFEST
+MANIFEST.SKIP
+test-pass
+.git
+pass
+sessions
+uploads
+mail_body

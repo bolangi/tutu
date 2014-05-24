@@ -1,0 +1,52 @@
+Tutu - A skimpy outfit for Dancer 
+
+Tutu is a simple flat-file CMS app inspired by Blosxom.  It
+is based on the Dancer web framework and Pages are coded as
+markdown.
+
+It is configured as I originally designed it--a website to 
+support training programs. It requires login, and it
+permits authenticated users to upload and download files.
+
+You may want to remove those capabilities if you don't need
+them. In fact, with everything available by streaming
+nowadays, it may be considered quaint to expect lay people
+to be able to download files, let alone understand what that
+means.
+
+INSTALLATION
+
+To install this module, you may run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module
+by typing perldoc Tutu. 
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Tutu
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Tutu
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Tutu
+
+    Search CPAN
+        http://search.cpan.org/dist/Tutu
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2014 Joel Roth
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+

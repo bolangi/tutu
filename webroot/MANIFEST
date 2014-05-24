@@ -1,0 +1,16 @@
+./environments
+./environments/development.yml
+./environments/production.yml
+./access
+./public
+./pages
+./uploads
+./views
+./views/layouts
+./views/layouts/main.tt
+./views/training.tt
+./announce-site
+./config.yml
+./dance.psgi
+./restricted_dirs
+./update-website

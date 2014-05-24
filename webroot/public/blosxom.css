@@ -1,0 +1,34 @@
+BODY,P,UL,TD,TH { font-family: Verdana,Geneva,Arial,Sans-serif; font-size: 18px; 
+color: #0E577F}
+CODE { font-family: Courier,monospace; font-size: 11px; color: #336699}
+PRE { font-family: Courier,monospace; font-size: 11px; color: #336699; }
+TH { text-decoration: italicize; font-weight: bold; font-size: 8pt; }
+H1 { text-decoration: italicize; font-weight: bold; font-size: 22pt; }
+H2 { text-decoration: italicize; font-weight: bold; font-size: 18pt; }
+H3 { text-decoration: italicize; font-weight: normal; font-size: 18pt; }
+H4 { text-decoration: italicize; font-weight: bold; font-size: 16pt; }
+EM { font-weight: bold; }
+a { color: #AF2E1D; text-decoration: none; font-weight: bold}
+.maintitle { font-size: 18px; font-weight: bold; color: #0E577F; }
+.date { text-decoration: italicize; font-weight: bold; color: #336699; }
+.breadcrumbs { text-decoration: italicize; font-weight: bold; color: #336699; }
+.path_info { font-weight: bold; color: #336699; }
+.path_info A:link, .path_info A:visited, .path_info A:active, .path_info A:hover { font-weight: bold; color: #336699; }
+.comments BLOCKQUOTE { color: #666666; }
+.comments P { color: #666666; }
+.writebacks BLOCKQUOTE { color: #666666; }
+.writebacks P { color: #666666; }
+.sidebartitle { font-size: 11px; font-weight: bold; color: #336699; }
+.title { font-size: 14px; font-weight: bold; color: #336699; }
+.subtitle { font-size: 11px; font-weight: bold; color: #336699; }
+.readme { border-left: 1px dotted; border-right: 1px dotted; border-top: 1px dotted; border-bottom: 1px dotted; border-color: #336699; float: right; width:100px; margin-left: 10px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; padding: 10px; background: #dddddd; color: #336699; font-size: 11px; }
+.meta { font-size: 9px; color: #336699 ; text-decoration: none; }
+.meta A:link, .meta A:visited, .meta A:active, .meta A:hover { color: #336699 ; text-decoration: none; }
+.notice { font-size: 7px; color: #ff0000 ; text-decoration: none; }
+.resource { font-size: 9px; color: #666666; }
+.title_indiv { font-weight: bold; font-size: 14pt; }
+.heading { text-decoration: italicize; font-weight: bold; color: #336699; }
+.more { font-weight: bold; font-decoration: caps; }
+.metadata { font-size: 9px; font-decoration: italic; }
+.expanded { DISPLAY: block; VISIBILITY: visible }
+.collapsed { DISPLAY: none; VISIBILITY: hidden }

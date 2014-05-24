@@ -1,0 +1,5 @@
+# BEGIN dancer application htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) dispatch.cgi/$1
+# END dancer application htaccess

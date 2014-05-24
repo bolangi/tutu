@@ -1,0 +1,6 @@
+Revision history for Tutu
+
+0.01    May 24, 2014
+
+        Initial verison, stripping site-specifics
+		renaming modules to Tutu and Tutu::Utils

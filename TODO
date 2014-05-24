@@ -1,0 +1,11 @@
+install script replaces vars
+$WEBROOT with e.g. /home/childspace/chi3 
+$EXAMPLE_COM childspacemethod.com -> WEBSITE_DOMAIN
+$WEBSITE_HOME http://childspacemethod.com ->WEBSITE_URL
+$WEBSITE_NAME ChildSpace Training Website
+$ADMINISTRATOR_NAME Max Fankel
+$WEBMASTER_MAIL_ADDRESS me@maxfankel.com
++ force save-to-disk for file download using javascript
+
++ password reset
++ file upload: mail webmaster (and use description)

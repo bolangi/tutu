@@ -1,0 +1,5 @@
+log: "debug"
+warnings: 0
+show_errors: 1
+auto_reload: 0
+app_root: "$WEBSITE_ROOT"
