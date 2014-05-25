@@ -106,7 +106,13 @@ get '/' => sub { redirect '/welcome' };
 
 get '/forbidden' => sub { forbidden(session->{requested_path}) };
 
+## The following two routes are a hack. The get '/**' route should
+## render the /upload route (if user is allowed) and *never* return
+## a page for /upload.html
+
 get '/upload' => sub { preprocess('upload', 'pages/upload.html', $render{html}) };
+get '/upload.html' => sub { redirect '/upload' };
+
 
 get '/**' => sub {
 	# there is nothing in the /public directory
