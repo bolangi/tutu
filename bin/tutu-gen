@@ -2,7 +2,7 @@
 use Modern::Perl;
 use Data::Dumper::Concise;
 
-my @customize = split "\n",qx(cat ./MY_WEBSITE_INIT);
+my @customize = map{chomp; $_} <>; 
 my %replace;
 my $rep;
 for (@customize)
