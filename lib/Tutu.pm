@@ -106,6 +106,8 @@ get '/' => sub { redirect '/welcome' };
 
 get '/forbidden' => sub { forbidden(session->{requested_path}) };
 
+get '/upload' => sub { preprocess('upload', 'pages/upload.html', $render{html}) };
+
 get '/**' => sub {
 	# there is nothing in the /public directory
 	# so we serve all requests
