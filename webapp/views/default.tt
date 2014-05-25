@@ -38,12 +38,17 @@
    <br />
 	<p>
    <b>A private site with file distribution</b>
+<p>
 
-<% if session.user || ! config.require_login %>
+<% if session.user  %>
 
 <p>Logged in as <b><% session.user %></b> 
-	
+
 <p>
+
+<% END %>
+	
+<% if session.user || ! config.require_login %>
   <a href="/">Home</a>
 <p>
   <a href="/misc">Misc</a>
