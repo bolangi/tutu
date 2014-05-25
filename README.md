@@ -46,6 +46,17 @@ CUSTOMIZING
     Move the $WEBSITE_ROOT and $WEBSITE_DOMAIN directories
     to the appropriate locations, if desired.
 
+UTILITIES
+---------
+
+Run **tutu-index** in your webapp directory to 
+create directory listings for your /public directory.
+
+Run **tutu-pass** in your webapp directory to create the
+passwd file that you website will need to verify logins.
+This script takes the file **pass** as input.
+
+
 COPYRIGHT AND LICENCE
 ---------------------
 
