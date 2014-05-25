@@ -109,10 +109,6 @@ get '/forbidden' => sub { forbidden(session->{requested_path}) };
 ## render the /upload route (if user is allowed) and *never* return
 ## a page for /upload.html
 
-get '/upload' => sub { preprocess('upload', 'pages/upload.html', $render{html}) };
-get '/upload.html' => sub { redirect '/upload' };
-
-
 get '/**' => sub {
 	# there is nothing in the /public directory
 	# so we serve all requests
@@ -149,14 +145,13 @@ get '/**' => sub {
 	if (0){}
 	else # maybe we have an .html .txt or .md file to serve ?
 	{ 
+				my $dir = join '/',$page_dir, @$matches;
 				my ($file) = File::Find::Rule->file()
                                      ->name( "$filename*" )
-                                     ->in(join '/',$page_dir, @$matches);
+                                     ->in($dir);
 				if ( ! $file ) { err_not_found($file) }
 				else { 
-					my ($name, $path, $ext1);
-					my ($ext) = $file =~ /\.(\w+)$/;
-					($name, $path, $ext1) = fileparse($file,$ext);
+					my ($name, $path, $ext) = fileparse($file,qw(html md));
 					preprocess($name, $file, $render{$ext});
 				}
 	}
