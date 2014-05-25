@@ -43,8 +43,11 @@ sub website_init {
 }
 
 hook 'before' => sub {
-  	if (!session('user') and request->path_info !~
-m{(login|bye|reminder-has-been-sent|remind|user-not-found)$}) {
+  	if ( 	
+			(config->{require_login} and !session('user'))
+			and request->path_info !~
+			m{(login|bye|reminder-has-been-sent|remind|user-not-found)$}
+	) {
   		# Pass the original path requested along to the handler:
   		session requested_path => request->path_info;
 		redirect('/login');

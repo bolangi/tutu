@@ -39,7 +39,7 @@
 	<p>
    <b>A private site with file distribution</b>
 
-<% if session.user %>
+<% if session.user || ! config.require_login %>
 
 <p>Logged in as <b><% session.user %></b> 
 	
@@ -56,7 +56,7 @@
 <p>
   <a href="/login">Log in</a>
 <p>
-<% IF session.user %>
+<% IF session.user || ! config.require_login %>
 <p>
    For any problems, send email to $WEBMASTER_MAIL_ADDRESS
 

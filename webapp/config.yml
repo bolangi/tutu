@@ -5,5 +5,5 @@ appname: "Tutu"
 session: "YAML"
 template: "template_toolkit"
 auto_reload: 0
-require_login: 1
+require_login: 0
 environment: development
