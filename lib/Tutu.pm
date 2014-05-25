@@ -13,12 +13,11 @@ use File::Find::Rule;
 use Tutu::Utils qw(index_directories find_user remote_reminder send_user_password);
 
 use Cwd;
-our $VERSION = '0.1';
+our $VERSION = 0.01;
+our $ABSTRACT = "Tutu - a skimpy outfit for Dancer";
 our ($root, $page_dir, $form_dir, $public, $access, $restricted,
 	$passwd, %passwd, %salt, %access, %is_restricted, %render);
 	
-website_init();
-
 sub website_init {
 	$root = shift // '.'; 
 	$VERSION = '0.1';
@@ -253,3 +252,51 @@ sub final_output {
 }
 true;
 __END__
+
+=pod
+
+=head1 NAME
+
+Tutu - a skimpy outfit for Dancer 
+
+=head1 SYNOPSIS
+
+
+	cd $TUTU_BUILD_DIRECTORY
+
+	$EDITOR MY_WEBSITE_INIT
+
+	tutu-configure MY_WEBSITE_INIT
+
+	# move $WEBSITE_ROOT and $WEBSITE_DOMAIN directories 
+	# to appropriate places if necessary
+	
+	cd $WEBSITE_ROOT
+
+	./dance.psgi # point your browser at http://localhost:3000
+
+
+=head1 DESCRIPTION
+
+Outfitted with Tutu, Dancer performs page
+rendering, access control and file up/downloading. Tutu
+also includes utilities for:
+
+=over 8
+
+=item tutu-makeapp : create and configure a new webapp 
+
+=item tutu-index : generate file directory listings
+
+=item tutu-pass : generate passwd file
+
+=item tutu-sync : synchronize the website with local development environment
+
+=back
+
+=head1 LICENSE
+
+This module is free software and is published under the same
+terms as Perl itself.
+
+=cut
