@@ -11,5 +11,5 @@ $Tutu::webmaster_mail_address = q($WEBMASTER_MAIL_ADDRESS);
 $Tutu::website_url = q($WEBSITE_URL);
 $Tutu::website_name = q($WEBSITE_NAME);
 $Tutu::require_login = q($REQUIRE_LOGIN);
-$Tutu::website_init();
+Tutu::website_init();
 dance;
