@@ -1,17 +1,19 @@
 Tutu
 ====
 
-Flat-file CMS based on the Dancer web framework
+Flat-file CMS
 
-Tutu is a flat-file CMS inspired by Blosxom, a minimalist
-blogging tool. Pages are created as text files, typically
-formatted with Markdown.  Tutu is based on the Dancer web
+Tutu is a flat-file CMS for creating dynamic websites.
+
+You can develop and test the site on your own system, and
+update the production site using Tutu's rsync script.
+
+Pages are created as text files, typically formatted with
+Markdown. Authenticated users may access pages and upload
+and download files based on per-user permissions.
+ 
+Tutu is inspired by Blosxom and based on the Dancer web
 framework.
-   
-Authenticated users may upload and download files.
-
-Access to individual pages and directories may be given on a
-per user basis.
 
 INSTALLATION
 ------------
@@ -23,19 +25,20 @@ To install this module, you may run the following commands:
 	make test
 	make install
 
-INITIAL TESTING
----------------
+INITIAL TESTING (no configuration needed)
+-----------------------------------------
 
+	cd $TUTU_BUILD_DIRECTORY
     cd webapp
 	./dance.psgi #  point your browser to http://localhost:3000
 	
 CREATING A NEW SITE (WEBAPP)
 ----------------------------
 
-	Edit MY_WEBSITE_INIT to suit your planned site.
+	Edit WEBSITE-CONFIG to suit your planned site.
 	Run this script:
 
-    tutu-config MY_WEBSITE_INIT
+    tutu-genapp WEBSITE-CONFIG
 
     Move the $WEBSITE_ROOT and $WEBSITE_DOMAIN directories
     to the appropriate locations, if desired.
@@ -46,6 +49,9 @@ CREATING A NEW SITE (WEBAPP)
 
 UTILITIES
 ---------
+Run **tutu-genapp** in your Tutu build directory
+to create webapp and domain directories
+for a new website, based on a config file.
 
 Run **tutu-index** in your webapp directory to 
 create directory listings for your /public directory.
