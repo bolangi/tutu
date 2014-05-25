@@ -8,9 +8,7 @@ blogging tool. Pages are created as text files, typically
 formatted with Markdown.  Tutu is based on the Dancer web
 framework.
    
-Tutu is configured as a private website to distribute media
-files for training course. It requires login. Authenticated
-users may upload and download files.
+Authenticated users may upload and download files.
 
 Access to individual pages and directories may be given on a
 per user basis.
