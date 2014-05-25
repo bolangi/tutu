@@ -284,7 +284,7 @@ also includes utilities for:
 
 =over 8
 
-=item tutu-makeapp : create and configure a new webapp 
+=item tutu-genapp : create and configure a new webapp 
 
 =item tutu-index : generate file directory listings
 
